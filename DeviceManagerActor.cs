@@ -19,7 +19,7 @@ public class DeviceManagerActor : ReceiveActor
             // Create or update BaseDeviceActor for the device
             if (!_deviceActors.ContainsKey(msg.DeviceId))
             {
-                var baseDeviceActor = Context.ActorOf(Props.Create(() => new BaseDeviceActor(msg.DeviceId, msg.IsOnline)), $"base-device-{msg.DeviceId}");
+                var baseDeviceActor = Context.ActorOf(Akka.Actor.Props.Create(() => new BaseDeviceActor(msg.DeviceId, msg.IsOnline)), $"base-device-{msg.DeviceId}");
                 _deviceActors[msg.DeviceId] = baseDeviceActor;
                 Console.WriteLine($"DeviceManager: Created BaseDeviceActor for {msg.DeviceId} (Online: {msg.IsOnline})");
             }
@@ -32,7 +32,7 @@ public class DeviceManagerActor : ReceiveActor
             // If the device is online, create or ensure OnlineDeviceActor exists
             if (msg.IsOnline)
             {
-                var onlineDeviceActor = Context.ActorOf(Props.Create(() => new OnlineDeviceActor(msg.DeviceId)), $"online-device-{msg.DeviceId}");
+                var onlineDeviceActor = Context.ActorOf(Akka.Actor.Props.Create(() => new OnlineDeviceActor(msg.DeviceId)), $"online-device-{msg.DeviceId}");
                 Console.WriteLine($"DeviceManager: Created OnlineDeviceActor for {msg.DeviceId}");
                 // Forward online-specific messages to OnlineDeviceActor
                 onlineDeviceActor.Tell(new PerformOnlineAction(msg.DeviceId, "Initialize"));
