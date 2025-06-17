@@ -1,0 +1,5 @@
+C:\Users\Eimantas\Desktop\my_projects\AkkaNetApp\obj\Debug\net9.0\AkkaNetApp.csproj.AssemblyReference.cache
+C:\Users\Eimantas\Desktop\my_projects\AkkaNetApp\obj\Debug\net9.0\AkkaNetApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Eimantas\Desktop\my_projects\AkkaNetApp\obj\Debug\net9.0\AkkaNetApp.AssemblyInfoInputs.cache
+C:\Users\Eimantas\Desktop\my_projects\AkkaNetApp\obj\Debug\net9.0\AkkaNetApp.AssemblyInfo.cs
+C:\Users\Eimantas\Desktop\my_projects\AkkaNetApp\obj\Debug\net9.0\AkkaNetApp.csproj.CoreCompileInputs.cache

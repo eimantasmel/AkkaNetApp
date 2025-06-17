@@ -1,0 +1,10 @@
+Program.cs: Main entry point to set up the actor system and test the functionality.
+
+Messages.cs: Defines message types for actor communication.
+
+DeviceManagerActor.cs: Implements the DeviceManager actor.
+
+BaseDeviceActor.cs: Implements the BaseDeviceActor for all devices.
+
+OnlineDeviceActor.cs: Implements the OnlineDeviceActor for online devices.
+
