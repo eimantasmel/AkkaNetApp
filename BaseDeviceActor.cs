@@ -7,6 +7,11 @@ public class BaseDeviceActor : ReceiveActor
     private readonly string _deviceId;
     private bool _isOnline;
 
+    public override void AroundPreStart()
+    {
+        base.AroundPreStart();
+    }
+
     public BaseDeviceActor(string deviceId, bool isOnline)
     {
         _deviceId = deviceId;

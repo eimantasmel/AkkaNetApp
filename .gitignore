@@ -5,11 +5,14 @@ notes.txt
 
 ### DotnetCore ###
 # .NET Core build folders
-bin/
+bin/*
 obj/
 
 # Common node modules locations
 /node_modules
 /wwwroot/node_modules
+
+.vs
+.vscode
 
 # End of https://www.toptal.com/developers/gitignore/api/dotnetcore

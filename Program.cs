@@ -37,9 +37,9 @@ class Program
         var status2 = await deviceManager.Ask<DeviceStatusResponse>(statusRequest2, TimeSpan.FromSeconds(2));
         var status3 = await deviceManager.Ask<DeviceStatusResponse>(statusRequest3, TimeSpan.FromSeconds(2));
 
-        // Print status responses
-        Console.WriteLine($"Status for {status1.DeviceId}: Online={status1.IsOnline}, Status={status1.Status}");
-        Console.WriteLine($"Status for {status2.DeviceId}: Online={status2.IsOnline}, Status={status2.Status}");
-        Console.WriteLine($"Status for {status3.DeviceId}: Online={status3.IsOnline}, Status={status3.Status}");
+        // Log status responses using Serilog logger
+        Log.Logger.Information("Status for {DeviceId}: Online={IsOnline}, Status={Status}", status1.DeviceId, status1.IsOnline, status1.Status);
+        Log.Logger.Information("Status for {DeviceId}: Online={IsOnline}, Status={Status}", status2.DeviceId, status2.IsOnline, status2.Status);
+        Log.Logger.Information("Status for {DeviceId}: Online={IsOnline}, Status={Status}", status3.DeviceId, status3.IsOnline, status3.Status);
     }
 }
