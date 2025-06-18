@@ -1,7 +1,3 @@
-// Define the message types for actor communication. These are immutable records that actors send and receive.
-
-
-
 namespace AkkaNetApp;
 
 // Message to register a new device with the DeviceManager

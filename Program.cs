@@ -41,9 +41,5 @@ class Program
         Console.WriteLine($"Status for {status1.DeviceId}: Online={status1.IsOnline}, Status={status1.Status}");
         Console.WriteLine($"Status for {status2.DeviceId}: Online={status2.IsOnline}, Status={status2.Status}");
         Console.WriteLine($"Status for {status3.DeviceId}: Online={status3.IsOnline}, Status={status3.Status}");
-
-        // Keep the console open
-        Console.WriteLine("Press any key to exit...");
-        Console.ReadKey();
     }
 }

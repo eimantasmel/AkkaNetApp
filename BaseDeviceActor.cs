@@ -1,6 +1,3 @@
-// The BaseDeviceActor handles basic device functionality and status for all devices (online or offline).
-
-
 using Akka.Actor;
 
 namespace AkkaNetApp;
